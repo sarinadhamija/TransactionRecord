@@ -54,12 +54,14 @@ class TransactionRecordFragment : Fragment(),
         binding.lifecycleOwner = this
         binding.viewModel = viewModel
 
-        viewModel.getProgressValue().observe(this, {
-            binding.progressBalance.isVisible = it >= 10
-        })
-
         viewModel.getProgressValue().observe(
             this, {
+                if (it > 5){
+                    binding.progressBalance.visibility = View.VISIBLE
+                } else {
+                    binding.progressBalance.visibility = View.GONE
+                }
+
                 binding.progressBalance.progress = it
             }
         )
