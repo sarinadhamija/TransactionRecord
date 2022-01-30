@@ -52,6 +52,7 @@
             android:layout_marginTop="@dimen/dimen_2"
             android:text="@{String.valueOf(transactionReportItem.data.amount)}"
             android:textSize="@dimen/dimen_text_16"
+            android:textColor="@android:color/darker_gray"
             app:layout_constraintLeft_toRightOf="@id/ic_item"
             app:layout_constraintRight_toLeftOf="@id/iv_item_delete"
             app:layout_constraintTop_toBottomOf="@id/tv_item_description"

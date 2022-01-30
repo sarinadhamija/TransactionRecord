@@ -9,6 +9,7 @@
         android:layout_height="match_parent"
         android:padding="@dimen/dimen_10"
         android:textSize="@dimen/dimen_text_16"
+        android:textColor="@color/black"
         android:drawableEnd="@drawable/ic_arrow_drop_down_purple"
         app:fontFamily="@font/roboto"
         android:drawablePadding="@dimen/dimen_2"
