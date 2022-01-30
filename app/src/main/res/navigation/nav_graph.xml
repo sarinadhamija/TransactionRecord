@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/TransactionListFragment">
+
+    <fragment
+        android:id="@+id/TransactionListFragment"
+        android:name="com.demo.transactionrecordproject.presentation.view.TransactionRecordFragment"
+        android:label="@string/transaction_record_fragment_label"
+        tools:layout="@layout/fragment_transaction_list">
+
+        <action
+            android:id="@+id/action_TransactionListFragment_to_AddTransactionDialogFragment"
+            app:destination="@id/AddTransactionDialogFragment" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/AddTransactionDialogFragment"
+        android:name="com.demo.transactionrecordproject.presentation.view.AddTransactionDialogFragment"
+        android:label="@string/add_transaction_fragment_label"
+        tools:layout="@layout/fragment_transaction_add"/>
+
+</navigation>

@@ -1,0 +1,3 @@
+package com.demo.transactionrecordproject.data.common
+
+interface BaseDataSource

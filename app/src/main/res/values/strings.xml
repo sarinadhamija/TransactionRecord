@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">FinanceRecordProject</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="transaction_record_fragment_label">Transaction Record Fragment</string>
+    <string name="add_transaction_fragment_label">Add Transaction Fragment</string>
+
+    <string name="next">Next</string>
+    <string name="text_add">Add</string>
+
+    <string name="dialog_add_transaction_title">Add Transaction</string>
+    <string name="dialog_add_transaction_description_hint">Enter Description*</string>
+    <string name="dialog_add_transaction_date_hint">Pick the Date*</string>
+    <string name="dialog_add_transaction_spinner_default_text">Select Transaction Type</string>
+    <string name="dialog_add_transaction_price_hint">Enter the Amount*</string>
+
+    <string name="title_transaction_list">Transaction Record</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="spinner_title">Select Transaction Type</string>
+
+    <string name="expense_amount">- $%1$s</string>
+    <string name="income_amount">$%1$s</string>
+</resources>

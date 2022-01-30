@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="transactionReportDate"
+            type="com.demo.transactionrecordproject.domain.entity.TransactionReportDateEntity" />
+        </data>
+
+    <androidx.appcompat.widget.AppCompatTextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="10th October, 2021"
+        android:padding="@dimen/dimen_10"
+        android:text="@{transactionReportDate.data}"
+        android:layout_marginBottom="@dimen/dimen_5"
+        android:textSize="@dimen/dimen_text_16"
+        android:textColor="@color/purple_700"
+        android:textStyle="bold"
+        android:fontFamily="@font/roboto_condensed_regular"
+        android:background="@drawable/background_outline"/>
+
+</layout>

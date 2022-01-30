@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="transactionReportItem"
+            type="com.demo.transactionrecordproject.domain.entity.TransactionReportItemEntity" />
+
+        <variable
+            name="transactionClickListener"
+            type="com.demo.transactionrecordproject.presentation.adapter.TransactionReportListAdapter.TransactionReportListAdapterListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_5"
+        android:layout_marginBottom="@dimen/dimen_5"
+        android:orientation="horizontal"
+        android:padding="@dimen/dimen_10">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ic_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_item_description"
+            app:srcCompat="@drawable/ic_monetization_filled" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_10"
+            android:fontFamily="@font/roboto"
+            android:text="@{transactionReportItem.data.description}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen_text_16"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@+id/ic_item"
+            app:layout_constraintRight_toLeftOf="@+id/iv_item_delete"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Coffee From Starbucks" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_amount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_2"
+            android:text="@{String.valueOf(transactionReportItem.data.amount)}"
+            android:textSize="@dimen/dimen_text_16"
+            app:layout_constraintLeft_toRightOf="@+id/ic_item"
+            app:layout_constraintRight_toLeftOf="@+id/iv_item_delete"
+            app:layout_constraintTop_toBottomOf="@+id/tv_item_description"
+            tools:text="- $200" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_item_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->transactionClickListener.deleteTransactionClicked(transactionReportItem)}"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_item_description"
+            app:srcCompat="@drawable/ic_delete_sweep_filled" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
