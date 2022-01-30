@@ -104,14 +104,19 @@ class AddTransactionDialogFragment : DialogFragment() {
             if (checkIfEmpty()) {
                 showToast("Please fill the mandatory fields")
             } else {
-                viewModel.fillTransactionValues(
-                    date = binding.tvAddTransactionDate.text.toString(),
-                    amount = binding.etAddTransactionPrice.text.toString().toDouble(),
-                    description = binding.tvAddTransactionDescription.text.toString(),
-                    type = viewModel.selectedTransactionType
-                )
+                if(isValidPrice()){
+                    viewModel.fillTransactionValues(
+                        date = binding.tvAddTransactionDate.text.toString(),
+                        amount = binding.etAddTransactionPrice.text.toString().toDouble(),
+                        description = binding.tvAddTransactionDescription.text.toString(),
+                        type = viewModel.selectedTransactionType
+                    )
 
-                viewModel.insertTransaction()
+                    viewModel.insertTransaction()
+                } else {
+                    showToast("Please enter value greater than 0")
+                }
+
             }
 
             viewModel.isSuccessful.observe(this, Observer {
@@ -171,6 +176,9 @@ class AddTransactionDialogFragment : DialogFragment() {
                 || binding.tvAddTransactionDescription.text.isNullOrEmpty()
                 || binding.tvAddTransactionDate.text.isNullOrEmpty()
     }
+
+    private fun isValidPrice() : Boolean =
+         binding.etAddTransactionPrice.text.toString().toDouble() > 0.0
 
     override fun onDestroyView() {
         super.onDestroyView()
