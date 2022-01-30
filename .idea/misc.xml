@@ -9,6 +9,7 @@
         <entry key="app/src/main/res/drawable/background_progress.xml" value="0.4338461538461538" />
         <entry key="app/src/main/res/drawable/background_purple_filled.xml" value="0.2604166666666667" />
         <entry key="app/src/main/res/drawable/background_radius_right.xml" value="0.440625" />
+        <entry key="app/src/main/res/drawable/background_top_radius_right_filled_purple.xml" value="0.2604166666666667" />
         <entry key="app/src/main/res/drawable/background_white_filled.xml" value="0.2604166666666667" />
         <entry key="app/src/main/res/drawable/ic_arrow_drop_down.xml" value="0.2604166666666667" />
         <entry key="app/src/main/res/drawable/ic_arrow_drop_down_purple.xml" value="0.321875" />
@@ -17,7 +18,7 @@
         <entry key="app/src/main/res/drawable/ic_cross_white_filled.xml" value="0.321875" />
         <entry key="app/src/main/res/drawable/ic_delete_sweep_filled.xml" value="0.6072916666666667" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.321875" />
-        <entry key="app/src/main/res/drawable/ic_monetization_filled.xml" value="0.6072916666666667" />
+        <entry key="app/src/main/res/drawable/ic_monetization_filled.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_outline_closs.xml" value="0.2604166666666667" />
         <entry key="app/src/main/res/font/roboto.xml" value="0.27447916666666666" />
         <entry key="app/src/main/res/layout/activity_transaction.xml" value="0.5911458333333334" />

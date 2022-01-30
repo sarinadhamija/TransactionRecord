@@ -23,4 +23,8 @@
 
     <string name="expense_amount">- $%1$s</string>
     <string name="income_amount">$%1$s</string>
+    <string name="expense_title">Expenses</string>
+    <string name="income_title">Income</string>
+    <string name="balance_title">Balance</string>
+    <string name="error_no_records">No Transaction Records available.</string>
 </resources>

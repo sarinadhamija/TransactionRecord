@@ -26,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/tv_item_description"
+            app:layout_constraintTop_toTopOf="@id/tv_item_description"
             app:srcCompat="@drawable/ic_monetization_filled" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -39,8 +39,8 @@
             android:textColor="@color/black"
             android:textSize="@dimen/dimen_text_16"
             android:textStyle="bold"
-            app:layout_constraintLeft_toRightOf="@+id/ic_item"
-            app:layout_constraintRight_toLeftOf="@+id/iv_item_delete"
+            app:layout_constraintLeft_toRightOf="@id/ic_item"
+            app:layout_constraintRight_toLeftOf="@id/iv_item_delete"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Coffee From Starbucks" />
 
@@ -52,9 +52,9 @@
             android:layout_marginTop="@dimen/dimen_2"
             android:text="@{String.valueOf(transactionReportItem.data.amount)}"
             android:textSize="@dimen/dimen_text_16"
-            app:layout_constraintLeft_toRightOf="@+id/ic_item"
-            app:layout_constraintRight_toLeftOf="@+id/iv_item_delete"
-            app:layout_constraintTop_toBottomOf="@+id/tv_item_description"
+            app:layout_constraintLeft_toRightOf="@id/ic_item"
+            app:layout_constraintRight_toLeftOf="@id/iv_item_delete"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_description"
             tools:text="- $200" />
 
         <androidx.appcompat.widget.AppCompatImageView
@@ -63,7 +63,7 @@
             android:layout_height="wrap_content"
             android:onClick="@{()->transactionClickListener.deleteTransactionClicked(transactionReportItem)}"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/tv_item_description"
+            app:layout_constraintTop_toTopOf="@id/tv_item_description"
             app:srcCompat="@drawable/ic_delete_sweep_filled" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
